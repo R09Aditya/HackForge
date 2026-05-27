@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly hardware hacking roadmap for electronics, microcontrollers, protocols, and embedded security.">
+  <title>Roadmap | HackForge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased">
+  <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-zinc-950/75 backdrop-blur-xl">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center" aria-label="HackForge home">
+          <span class="font-orbitron text-lg font-bold text-white">HackForge</span>
+        </a>
+        <div class="hidden items-center gap-5 text-sm md:flex">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="tools.html">Tools</a>
+          <a class="nav-link active" href="roadmap.html" aria-current="page">Roadmap</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="resources.html">Resources</a>
+          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <button id="menuBtn" class="nav-toggle rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-3 py-2 md:hidden" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-cyan-400/10 py-4 md:hidden">
+        <div class="grid gap-3 text-sm">
+          <a class="mobile-link" href="index.html">Home</a>
+          <a class="mobile-link" href="tools.html">Tools</a>
+          <a class="mobile-link active" href="roadmap.html" aria-current="page">Roadmap</a>
+          <a class="mobile-link" href="projects.html">Projects</a>
+          <a class="mobile-link" href="resources.html">Resources</a>
+          <a class="mobile-link" href="faq.html">FAQ</a>
+          <a class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cyber-grid border-b border-cyan-400/10 py-20 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+          <div>
+            <p class="section-kicker mb-4 text-xs font-semibold">learning path</p>
+            <h1 class="font-orbitron text-4xl font-extrabold text-white sm:text-5xl">Hardware hacking roadmap</h1>
+          </div>
+          <p class="text-base leading-8 text-zinc-300">This path starts slow on purpose. The goal is to understand voltage, protocols, and firmware before trying advanced exploitation work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="timeline space-y-10">
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-zinc-950 text-xs font-bold text-cyan-200 md:left-1/2 md:-translate-x-1/2">1</div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-0 md:mr-8">
+              <p class="badge mb-4">10 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Electronics Basics</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Learn voltage, current, resistance, pull-ups, breadboards, and why ground is not optional.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: Ohm's law, multimeter use, reading simple schematics</p>
+            </article>
+            <div class="hidden md:block"></div>
+          </div>
+
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-zinc-950 text-xs font-bold text-cyan-200 md:left-1/2 md:-translate-x-1/2">2</div>
+            <div class="hidden md:block"></div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-8">
+              <p class="badge mb-4">24 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Microcontrollers</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Use Arduino, Pico, or ESP32 to control pins, read sensors, blink LEDs, and debug basic code.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: GPIO, PWM, interrupts, serial output</p>
+            </article>
+          </div>
+
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-zinc-950 text-xs font-bold text-cyan-200 md:left-1/2 md:-translate-x-1/2">3</div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-0 md:mr-8">
+              <p class="badge mb-4">38 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Communication Protocols</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Capture and decode UART, SPI, I2C, and basic USB behavior with a logic analyzer.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: bus sniffing, baud rates, timing, datasheets</p>
+            </article>
+            <div class="hidden md:block"></div>
+          </div>
+
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-zinc-950 text-xs font-bold text-cyan-200 md:left-1/2 md:-translate-x-1/2">4</div>
+            <div class="hidden md:block"></div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-8">
+              <p class="badge mb-4">52 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Embedded Systems</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Understand bootloaders, memory maps, debug ports, firmware updates, and device constraints.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: flashing firmware, SWD/JTAG basics, logs</p>
+            </article>
+          </div>
+
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-zinc-950 text-xs font-bold text-cyan-200 md:left-1/2 md:-translate-x-1/2">5</div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-0 md:mr-8">
+              <p class="badge mb-4">67 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Wireless Security</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Study WiFi, BLE, and sub-GHz behavior using lab networks, test devices, and known-good captures.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: radio basics, advertisements, channels, safe test plans</p>
+            </article>
+            <div class="hidden md:block"></div>
+          </div>
+
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300 bg-zinc-950 text-xs font-bold text-cyan-200 md:left-1/2 md:-translate-x-1/2">6</div>
+            <div class="hidden md:block"></div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-8">
+              <p class="badge mb-4">82 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Hardware Exploitation</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Move into firmware extraction, insecure debug ports, side-channel awareness, and fault concepts.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: threat modeling, firmware triage, hardware notes</p>
+            </article>
+          </div>
+
+          <div class="relative grid gap-6 md:grid-cols-2 md:gap-12">
+            <div class="timeline-dot absolute left-0 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-green-300 bg-zinc-950 text-xs font-bold text-green-200 md:left-1/2 md:-translate-x-1/2">7</div>
+            <article class="glass-card glow-card ml-12 rounded-lg p-6 md:ml-0 md:mr-8">
+              <p class="badge mb-4">100 percent</p>
+              <h2 class="font-orbitron text-xl font-bold text-white">Advanced Red Team Hardware</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Practice reporting, payload safety, implant detection, and controlled assessments with explicit scope.</p>
+              <p class="mt-4 text-sm text-cyan-200">Skills: scoping, evidence, defensive validation, cleanup</p>
+            </article>
+            <div class="hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-cyan-400/10 bg-zinc-950/60 py-16 backdrop-blur">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-card rounded-lg p-6 md:p-8">
+          <div class="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+            <div>
+              <p class="section-kicker mb-3 text-xs font-semibold">pace note</p>
+              <h2 class="font-orbitron text-2xl font-bold text-white">Slow labs beat random tool collecting.</h2>
+            </div>
+            <p class="text-sm leading-7 text-zinc-400">Spend a week at each stage if you are new. Keep a lab notebook with wiring photos, screenshots, and what failed. The boring notes become the useful ones later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-cyan-400/10 bg-zinc-950/90 py-10">
+    <div class="container mx-auto flex flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>
+        <p class="font-orbitron text-lg font-bold text-white">HackForge</p>
+        <p class="mt-2 text-sm text-zinc-500">Learn on your own hardware. Document everything.</p>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-zinc-400">
+        <a class="nav-link" href="tools.html">Tools</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="resources.html">Resources</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

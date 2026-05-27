@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learning resources for hardware hacking, embedded systems, electronics, and cybersecurity practice.">
+  <title>Learning Resources | HackForge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased">
+  <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-zinc-950/75 backdrop-blur-xl">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center" aria-label="HackForge home">
+          <span class="font-orbitron text-lg font-bold text-white">HackForge</span>
+        </a>
+        <div class="hidden items-center gap-5 text-sm md:flex">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="tools.html">Tools</a>
+          <a class="nav-link" href="roadmap.html">Roadmap</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link active" href="resources.html" aria-current="page">Resources</a>
+          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <button id="menuBtn" class="nav-toggle rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-3 py-2 md:hidden" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-cyan-400/10 py-4 md:hidden">
+        <div class="grid gap-3 text-sm">
+          <a class="mobile-link" href="index.html">Home</a>
+          <a class="mobile-link" href="tools.html">Tools</a>
+          <a class="mobile-link" href="roadmap.html">Roadmap</a>
+          <a class="mobile-link" href="projects.html">Projects</a>
+          <a class="mobile-link active" href="resources.html" aria-current="page">Resources</a>
+          <a class="mobile-link" href="faq.html">FAQ</a>
+          <a class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cyber-grid border-b border-cyan-400/10 py-20 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="section-kicker mb-4 text-xs font-semibold">resource locker</p>
+          <h1 class="font-orbitron text-4xl font-extrabold text-white sm:text-5xl">Learn without buying every shiny gadget.</h1>
+          <p class="mt-5 text-base leading-8 text-zinc-300">A practical mix of channels, books, websites, labs, and starter habits for embedded security learners.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-wrap gap-3">
+          <button class="tab-button active rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:text-white" type="button" data-tab-target="youtube">YouTube Channels</button>
+          <button class="tab-button rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:text-white" type="button" data-tab-target="books">Books</button>
+          <button class="tab-button rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:text-white" type="button" data-tab-target="websites">Websites</button>
+          <button class="tab-button rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:text-white" type="button" data-tab-target="labs">Practice Labs</button>
+          <button class="tab-button rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-4 py-3 text-sm text-zinc-300 transition hover:text-white" type="button" data-tab-target="guides">Beginner Guides</button>
+        </div>
+
+        <div class="tab-panel active" data-tab-panel="youtube">
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">digital logic</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Ben Eater</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Great for seeing computers, buses, and basic electronics explained slowly on real hardware.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">security mindset</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">LiveOverflow</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Helpful for learning how to reason through systems and CTF-style problems.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">low level</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Low Level Learning</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">C, memory, operating systems, and debugging topics that support embedded work.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">microcontrollers</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Andreas Spiess</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Practical ESP32, wireless, sensors, and maker hardware explanations.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="books">
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">electronics</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Practical Electronics for Inventors</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">A thick but useful reference when parts, circuits, and measurements stop making sense.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">maker security</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">The Hardware Hacker</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">A readable look at manufacturing, trust, supply chains, and real-world hardware thinking.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">firmware</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Making Embedded Systems</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Good for understanding constraints, design habits, and how embedded teams think.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">IoT security</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Practical IoT Hacking</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Useful once you already have basic networking, Linux, and electronics comfort.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="websites">
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">projects</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Hackaday</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Project writeups that show how real people debug weird hardware problems.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">security</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">OWASP IoT Security</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Threats, checklists, and defensive concepts for connected devices.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">docs</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Arduino Docs</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Pin references, library examples, and beginner-friendly microcontroller notes.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">datasheets</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Vendor Documentation</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">The boring official PDF is often the best source for pins, timing, and registers.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="labs">
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">firmware</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Microcorruption</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Embedded-style reverse engineering challenges in a browser-based training environment.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">local bench</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">UART Console Lab</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Use a spare router or dev board to practice finding serial pins and saving boot logs.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">radio</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">BLE Beacon Lab</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Create your own test beacon and observe how names, services, and signal strength appear.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">RFID</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Test Tag Kit</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Compare blank tags, known cards, and reader logs without touching real access systems.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="guides">
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">first week</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Learn the meter</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Practice continuity, DC voltage, and polarity checks until they feel automatic.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">protocols</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Capture one UART log</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Document the pins, voltage, baud rate, and the exact adapter settings you used.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">firmware</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Read a memory map</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Sketch flash, RAM, bootloader, and peripheral addresses from a real datasheet.</p>
+            </article>
+            <article class="glass-card glow-card rounded-lg p-6">
+              <p class="badge mb-4">ethics</p>
+              <h2 class="font-orbitron text-lg font-bold text-white">Write the scope first</h2>
+              <p class="mt-3 text-sm leading-7 text-zinc-400">Before any demo, write what is allowed, what is off-limits, and how you will clean up.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-cyan-400/10 bg-zinc-950/90 py-10">
+    <div class="container mx-auto flex flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>
+        <p class="font-orbitron text-lg font-bold text-white">HackForge</p>
+        <p class="mt-2 text-sm text-zinc-500">Learn on your own hardware. Document everything.</p>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-zinc-400">
+        <a class="nav-link" href="tools.html">Tools</a>
+        <a class="nav-link" href="roadmap.html">Roadmap</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

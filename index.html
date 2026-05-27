@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="HackForge is a student-built guide to hardware hacking, embedded security, and red team hardware labs.">
+  <title>HackForge | Hardware Hacking and Embedded Security</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-zinc-950 text-zinc-100 antialiased">
+  <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-zinc-950/75 backdrop-blur-xl">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center" aria-label="HackForge home">
+          <span class="font-orbitron text-lg font-bold text-white">HackForge</span>
+        </a>
+        <div class="hidden items-center gap-5 text-sm md:flex">
+          <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="tools.html">Tools</a>
+          <a class="nav-link" href="roadmap.html">Roadmap</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="resources.html">Resources</a>
+          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <button id="menuBtn" class="nav-toggle rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-3 py-2 md:hidden"
+          type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-cyan-400/10 py-4 md:hidden">
+        <div class="grid gap-3 text-sm">
+          <a class="mobile-link active" href="index.html" aria-current="page">Home</a>
+          <a class="mobile-link" href="tools.html">Tools</a>
+          <a class="mobile-link" href="roadmap.html">Roadmap</a>
+          <a class="mobile-link" href="projects.html">Projects</a>
+          <a class="mobile-link" href="resources.html">Resources</a>
+          <a class="mobile-link" href="faq.html">FAQ</a>
+          <a class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cyber-grid relative min-h-screen overflow-hidden">
+      <div class="container mx-auto flex min-h-screen items-center px-4 py-20 sm:px-6 lg:px-8">
+        <div class="grid w-full items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="max-w-3xl">
+            <p class="section-kicker mb-4 text-xs font-semibold">student lab for embedded security</p>
+            <h1 class="font-orbitron text-5xl font-extrabold leading-tight text-white sm:text-6xl lg:text-7xl">
+              <span class="gradient-text">HackForge</span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-zinc-300 sm:text-lg">
+              Hardware hacking notes, tool guides, and lab-safe project ideas for learning how real devices communicate,
+              fail, and get defended.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="roadmap.html"
+                class="gradient-btn rounded-lg px-6 py-3 text-center text-sm font-bold text-white">Start the Roadmap</a>
+              <a href="projects.html"
+                class="ghost-btn rounded-lg px-6 py-3 text-center text-sm font-bold text-zinc-200">View DIY Projects</a>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3 text-xs text-zinc-400">
+              <span class="badge">UART</span>
+              <span class="badge">SPI</span>
+              <span class="badge">I2C</span>
+              <span class="badge">RFID</span>
+              <span class="badge">BLE</span>
+            </div>
+          </div>
+          <div class="glass-card rounded-lg p-6">
+            <p class="section-kicker mb-3 text-xs font-semibold">starter bench</p>
+            <h2 class="font-orbitron text-2xl font-bold text-white">Small lab, clear notes.</h2>
+            <p class="mt-4 text-sm leading-7 text-zinc-400">
+              Start with a board you own, a meter, a logic analyzer, and a notebook. Measure first, connect slowly,
+              and save the settings that worked.
+            </p>
+            <div class="mt-6 grid gap-3 text-sm text-zinc-300">
+              <div class="rounded-lg border border-cyan-400/15 bg-zinc-950/50 p-3">Measure voltage before wiring.</div>
+              <div class="rounded-lg border border-cyan-400/15 bg-zinc-950/50 p-3">Label ground, RX, TX, and power.</div>
+              <div class="rounded-lg border border-cyan-400/15 bg-zinc-950/50 p-3">Keep photos, baud rates, and logs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 max-w-2xl">
+          <p class="section-kicker mb-3 text-xs font-semibold">featured paths</p>
+          <h2 class="font-orbitron text-3xl font-bold text-white sm:text-4xl">Build the basics, then break your own lab
+            gear.</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="glass-card glow-card rounded-lg p-6">
+            <p
+              class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">
+              01</p>
+            <h3 class="font-orbitron text-xl font-bold text-white">Tool Notes</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Quick cards for common hardware hacking tools, including
+              what they help you learn before you buy anything.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-6">
+            <p
+              class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 font-orbitron text-blue-200">
+              02</p>
+            <h3 class="font-orbitron text-xl font-bold text-white">Lab Roadmap</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">A no-drama path from resistors and logic levels to buses,
+              radio, firmware, and responsible red team hardware.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-6">
+            <p
+              class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg border border-green-400/30 bg-green-400/10 font-orbitron text-green-200">
+              03</p>
+            <h3 class="font-orbitron text-xl font-bold text-white">Project Shelf</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Small projects designed for permission-based practice,
+              school clubs, and home networks you control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-cyan-400/10 bg-zinc-950/60 py-16 backdrop-blur">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="glass-card rounded-lg p-6">
+            <p class="font-orbitron text-lg font-bold text-white">Roadmap first</p>
+            <p class="mt-2 text-sm text-zinc-400">Move through the basics before buying advanced gear.</p>
+          </article>
+          <article class="glass-card rounded-lg p-6">
+            <p class="font-orbitron text-lg font-bold text-white">Measure first</p>
+            <p class="mt-2 text-sm text-zinc-400">Check voltage, polarity, and ground before connecting.</p>
+          </article>
+          <article class="glass-card rounded-lg p-6">
+            <p class="font-orbitron text-lg font-bold text-white">Document labs</p>
+            <p class="mt-2 text-sm text-zinc-400">Save wiring photos, commands, captures, and mistakes.</p>
+          </article>
+          <article class="glass-card rounded-lg p-6">
+            <p class="font-orbitron text-lg font-bold text-white">Permission only</p>
+            <p class="mt-2 text-sm text-zinc-400">Practice on hardware, tags, and networks you are allowed to test.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p class="section-kicker mb-3 text-xs font-semibold">terminal log</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white sm:text-4xl">What this site is actually about</h2>
+            <p class="mt-4 text-sm leading-7 text-zinc-400">HackForge is for learning how embedded devices work at the
+              pins, packets, and firmware level. It keeps the focus on controlled labs, documentation, and building
+              enough electronics intuition to avoid random guessing.</p>
+          </div>
+          <div class="glass-card rounded-lg">
+            <div class="flex items-center gap-2 border-b border-cyan-400/10 px-4 py-3">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-300"></span>
+              <span class="h-3 w-3 rounded-full bg-green-400"></span>
+              <span class="ml-3 text-xs text-zinc-500">hackforge/session.log</span>
+            </div>
+            <div class="space-y-3 p-5 text-sm leading-7 text-zinc-300">
+              <p><span class="text-green-300">$</span> identify target: old dev board</p>
+              <p><span class="text-green-300">$</span> measure voltage before connecting anything</p>
+              <p><span class="text-green-300">$</span> map UART pins, save notes, verify baud rate</p>
+              <p><span class="text-cyan-300">result:</span> readable boot log, no magic, just patience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker mb-3 text-xs font-semibold">featured categories</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white sm:text-4xl">Pick a corner of the lab.</h2>
+          </div>
+          <a href="tools.html" class="ghost-btn rounded-lg px-5 py-3 text-sm font-bold text-zinc-200">Browse all
+            tools</a>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="tools.html#rfid" class="glass-card glow-card rounded-lg p-5">
+            <p class="text-xs text-cyan-200">RFID/NFC</p>
+            <h3 class="mt-3 font-orbitron text-lg font-bold text-white">Tags and readers</h3>
+          </a>
+          <a href="tools.html#wireless" class="glass-card glow-card rounded-lg p-5">
+            <p class="text-xs text-blue-200">Wireless</p>
+            <h3 class="mt-3 font-orbitron text-lg font-bold text-white">WiFi, BLE, sub-GHz</h3>
+          </a>
+          <a href="tools.html#embedded" class="glass-card glow-card rounded-lg p-5">
+            <p class="text-xs text-green-200">Boards</p>
+            <h3 class="mt-3 font-orbitron text-lg font-bold text-white">MCUs and debug ports</h3>
+          </a>
+          <a href="tools.html#testing" class="glass-card glow-card rounded-lg p-5">
+            <p class="text-xs text-cyan-200">Testing</p>
+            <h3 class="mt-3 font-orbitron text-lg font-bold text-white">Signals and scopes</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-cyan-400/10 bg-zinc-950/90 py-10">
+    <div
+      class="container mx-auto flex flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>
+        <p class="font-orbitron text-lg font-bold text-white">HackForge</p>
+        <p class="mt-2 text-sm text-zinc-500">Learn on your own hardware. Document everything.</p>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-zinc-400">
+        <a class="nav-link" href="tools.html">Tools</a>
+        <a class="nav-link" href="roadmap.html">Roadmap</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

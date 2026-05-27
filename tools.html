@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hardware hacking tools for RFID, wireless, USB, embedded boards, and electronics testing.">
+  <title>Tools | HackForge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased">
+  <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-zinc-950/75 backdrop-blur-xl">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center" aria-label="HackForge home">
+          <span class="font-orbitron text-lg font-bold text-white">HackForge</span>
+        </a>
+        <div class="hidden items-center gap-5 text-sm md:flex">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="tools.html" aria-current="page">Tools</a>
+          <a class="nav-link" href="roadmap.html">Roadmap</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="resources.html">Resources</a>
+          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <button id="menuBtn" class="nav-toggle rounded-lg border border-cyan-400/20 bg-zinc-900/70 px-3 py-2 md:hidden" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-cyan-400/10 py-4 md:hidden">
+        <div class="grid gap-3 text-sm">
+          <a class="mobile-link" href="index.html">Home</a>
+          <a class="mobile-link active" href="tools.html" aria-current="page">Tools</a>
+          <a class="mobile-link" href="roadmap.html">Roadmap</a>
+          <a class="mobile-link" href="projects.html">Projects</a>
+          <a class="mobile-link" href="resources.html">Resources</a>
+          <a class="mobile-link" href="faq.html">FAQ</a>
+          <a class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cyber-grid border-b border-cyan-400/10 py-20 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="section-kicker mb-4 text-xs font-semibold">hardware bench</p>
+          <h1 class="font-orbitron text-4xl font-extrabold text-white sm:text-5xl">Tools that teach the signals.</h1>
+          <p class="mt-5 text-base leading-8 text-zinc-300">A practical catalog of boards and instruments for learning embedded security. The best tool is the one you can safely test, document, and understand.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rfid" class="py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker mb-2 text-xs font-semibold">category 01</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white">RFID/NFC Tools</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-zinc-400">Useful for studying access cards, reader behavior, and tag protocols in permission-based labs.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">F0</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Flipper Zero</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Portable multi-tool for learning RFID, NFC, infrared, GPIO, and basic radio concepts.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 font-orbitron text-blue-200">P3</span>
+              <span class="badge">Advanced</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Proxmark3</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Research board for deeper RFID/NFC analysis, tag emulation, and protocol inspection.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-green-400/30 bg-green-400/10 font-orbitron text-green-200">PN</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">PN532 Breakout</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Small NFC module that pairs nicely with Arduino or Raspberry Pi for simple reader labs.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">CU</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">ChameleonUltra</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Compact RFID emulator for comparing known test tags and studying card behavior.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="wireless" class="border-y border-cyan-400/10 bg-zinc-950/55 py-16 backdrop-blur">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker mb-2 text-xs font-semibold">category 02</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white">Wireless Tools</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-zinc-400">Start with your own router, dev boards, and test beacons before touching anything public.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">E32</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">ESP32</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Affordable WiFi and Bluetooth board for packet demos, sensors, and safe network labs.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 font-orbitron text-blue-200">NRF</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">nRF52840 Dongle</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">BLE-focused board for advertising, sniffing supported channels, and firmware practice.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-green-400/30 bg-green-400/10 font-orbitron text-green-200">AW</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Alfa WiFi Adapter</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">External adapter often used in wireless security labs with monitor-mode tooling.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">YS</span>
+              <span class="badge">Advanced</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Yard Stick One</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Sub-GHz research tool for controlled radio experiments and protocol learning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="usb" class="py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker mb-2 text-xs font-semibold">category 03</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white">USB Attack Tools</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-zinc-400">Use these only on systems you own or have written permission to test.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">RD</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Rubber Ducky</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Keystroke-injection platform for awareness demos and defensive testing in a lab VM.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 font-orbitron text-blue-200">DG</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Digispark ATtiny85</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Tiny board that helps explain HID behavior, delays, and why endpoint trust matters.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-green-400/30 bg-green-400/10 font-orbitron text-green-200">BB</span>
+              <span class="badge">Advanced</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Bash Bunny</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Multi-role USB device for controlled demos of storage, network, and HID trust issues.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="embedded" class="border-y border-cyan-400/10 bg-zinc-950/55 py-16 backdrop-blur">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker mb-2 text-xs font-semibold">category 04</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white">Embedded Development Boards</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-zinc-400">Boards are the cheapest way to learn how firmware, pins, and protocols fit together.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">UNO</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Arduino</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Friendly board for sensors, GPIO, serial basics, and simple embedded C style projects.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 font-orbitron text-blue-200">PICO</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Raspberry Pi Pico</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">RP2040 board for MicroPython, C SDK work, PIO experiments, and low-cost labs.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-green-400/30 bg-green-400/10 font-orbitron text-green-200">E32</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">ESP32 DevKit</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Good bridge between microcontroller projects and connected-device security concepts.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">STM</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">STM32 Nucleo</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">ARM board family for debugger workflows, datasheets, timers, and peripheral control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testing" class="py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col justify-between gap-3 md:flex-row md:items-end">
+          <div>
+            <p class="section-kicker mb-2 text-xs font-semibold">category 05</p>
+            <h2 class="font-orbitron text-3xl font-bold text-white">Electronic Testing Equipment</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-zinc-400">Measure first. Guessing is how boards get hot, quiet, and expensive.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">LA</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Logic Analyzer</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Captures digital signals so you can decode UART, SPI, I2C, and timing issues.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-400/10 font-orbitron text-blue-200">OSC</span>
+              <span class="badge">Intermediate</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Oscilloscope</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Shows voltage over time, making clocks, noise, reset lines, and glitches visible.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-green-400/30 bg-green-400/10 font-orbitron text-green-200">DMM</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">Digital Multimeter</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Essential for continuity, voltage checks, resistance, and basic board safety.</p>
+          </article>
+          <article class="glass-card glow-card rounded-lg p-5">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="flex h-12 w-12 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 font-orbitron text-cyan-200">UART</span>
+              <span class="badge">Beginner</span>
+            </div>
+            <h3 class="font-orbitron text-lg font-bold text-white">USB-UART Adapter</h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-400">Connects serial consoles after you confirm voltage level and ground reference.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-cyan-400/10 bg-zinc-950/90 py-10">
+    <div class="container mx-auto flex flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>
+        <p class="font-orbitron text-lg font-bold text-white">HackForge</p>
+        <p class="mt-2 text-sm text-zinc-500">Learn on your own hardware. Document everything.</p>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-zinc-400">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="roadmap.html">Roadmap</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
